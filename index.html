@@ -1,16 +1,24 @@
 <html>
   <head>
     <title>Growler</title>
-  </head>
-<body>
-    <div id="growler">
-        {{ message }}
-    </div>
-    
+
+    <link rel="stylesheet" href="./css/index.css">
+
     <script type="text/javascript" src="https://unpkg.com/vue"></script> 
     <script type="text/javascript" src="https://unpkg.com/axios/dist/axios.min.js"></script> 
-    <script type="text/javascript" src="./mywebapp.js"> </script>
 
+  </head>
+<body>
+  
+    <div id="growler">
+        <h2 
+        v-text="appName" 
+        v-bind:style= "{color: isOnline? '#FF6A00':'#000'}"
+        v-bind:class="{'headers': true}">
+        </h2>
+    </div>
+
+    <script type="text/javascript" src="./js/mywebapp.js"> </script>    
 
 </body>
 
