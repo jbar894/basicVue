@@ -16,6 +16,42 @@
         v-bind:style= "{color: isOnline? '#FF6A00':'#000'}"
         v-bind:class="{'headers': true}">
         </h2>
+        <input type="checkbox" v-model="isPowerSyntaxEnabled">
+
+        <br />
+
+        <div>Searching for: {{ isPowerSyntaxEnabled }}</div>
+        <br />
+
+        <label>
+            <input
+                type="checkbox" value="beers"
+                v-model="searchIndexes">
+            Beers
+        </label>
+        <br />
+
+        <label>
+            <input
+                type="checkbox" value="breweries"
+                v-model="searchIndexes">
+            Breweries
+        </label>
+        
+        <br />
+
+        <small>
+            Selected: {{ searchIndexes }}
+        </small>
+
+        <br />
+
+        <input v-model.lazy.number="result" placeholder="2+3=">
+
+        <br />
+
+        <div>Searching for: {{ result }}</div>
+        
     </div>
 
     <script type="text/javascript" src="./js/mywebapp.js"> </script>    
